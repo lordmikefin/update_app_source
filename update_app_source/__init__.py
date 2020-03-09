@@ -23,3 +23,6 @@ __license__ = "MIT License"
 __version__ = "0.0.1"
 __revision__ = "update_app_source (module)  v" + __version__ + " (2020-03-09)"
 
+#source_file = './app_source/app_source.xml'
+
+from . import source
