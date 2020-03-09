@@ -41,3 +41,19 @@ def create_sample(source_file: str):
 
     #indent(root)
     tree.write(file, encoding="UTF-8", xml_declaration=True)
+
+def parse(source_file: str):
+    print('parse the source XML file')
+    file = source_file
+    tree = ET.parse(file)
+    root = tree.getroot()
+    for elem in root:
+        if elem.tag == Tag.version:
+            version = elem.text
+            print('source XML file version: ' + str(version))
+            # TODO: do real version comparsion
+            if version != __version__:
+                # TODO: log warnings.
+                print('WARNING: version different.')
+        else:
+            print('Unhandled tag: ' + str(elem.tag))
