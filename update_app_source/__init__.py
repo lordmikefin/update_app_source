@@ -25,4 +25,5 @@ __revision__ = "update_app_source (module)  v" + __version__ + " (2020-03-09)"
 
 #source_file = './app_source/app_source.xml'
 
-from . import source
+#from . import source
+from app_source_handler import source
