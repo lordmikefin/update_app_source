@@ -8,7 +8,8 @@ import update_app_source
 import logging
 import sys
 
-logger = update_app_source.logger
+#logger = update_app_source.logger
+logger = logging.getLogger('update_app_source')
 
 def conf_root_logger():
     # Default log level.
