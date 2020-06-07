@@ -54,7 +54,6 @@ if __name__ == '__main__':
     conf_root_logger()
     conf_update_app_source_logger()
     conf_app_source_handler_logger()
-    #print(update_app_source.__revision__)
     logger.info(update_app_source.__revision__)
     source_file = './app_source/app_source.xml'
     # TODO: use 'update_app_source' project to create the source file
@@ -62,5 +61,4 @@ if __name__ == '__main__':
     update_app_source.source.create_sample(source_file)
     update_app_source.source.parse(source_file)
     json_dump = json.dumps(update_app_source.source.APPS, sort_keys=True, indent=2)
-    #print('APPS: ' + json_dump)
     logger.info('APPS: ' + json_dump)
