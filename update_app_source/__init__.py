@@ -18,12 +18,22 @@
     :copyright: (c) 2020, Mikko Niemelä a.k.a. Lord Mike (lordmike@iki.fi)
     :license: MIT License
 """
+import logging
 
 __license__ = "MIT License"
-__version__ = "0.0.1"
-__revision__ = "update_app_source (module)  v" + __version__ + " (2020-03-09)"
+__version__ = "0.0.2"
+__revision__ = "update_app_source (module)  v" + __version__ + " (2020-06-06)"
 
 #source_file = './app_source/app_source.xml'
 
 #from . import source
 from app_source_handler import source
+
+def create_logger():
+    # https://www.toptal.com/python/in-depth-python-logging
+    log = logging.getLogger('update_app_source')
+    # Do not propagate the log up to parent
+    log.propagate = False
+    return log
+
+logger = create_logger()
