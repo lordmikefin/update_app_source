@@ -21,8 +21,8 @@
 import logging
 
 __license__ = "MIT License"
-__version__ = "0.0.2"
-__revision__ = "update_app_source (module)  v" + __version__ + " (2020-06-06)"
+__version__ = "0.0.3"
+__revision__ = "update_app_source (module)  v" + __version__ + " (2020-06-07)"
 
 #source_file = './app_source/app_source.xml'
 

@@ -15,7 +15,7 @@ def conf_root_logger():
     # Default log level.
     logging.basicConfig(level=logging.DEBUG)
 
-def conf_setup_apps_logger():
+def conf_update_app_source_logger():
     logger_conf = logger
     logger_conf.addHandler(create_hand_stdout())
     logger_conf.addHandler(create_hand_stderr())
@@ -44,9 +44,16 @@ def create_hand_stderr():
     hand_stderr.setFormatter(formatter)
     return hand_stderr
 
+def conf_app_source_handler_logger():
+    logger_conf = logging.getLogger('app_source_handler')
+    logger_conf.addHandler(create_hand_stdout())
+    logger_conf.addHandler(create_hand_stderr())
+
+
 if __name__ == '__main__':
     conf_root_logger()
-    conf_setup_apps_logger()
+    conf_update_app_source_logger()
+    conf_app_source_handler_logger()
     #print(update_app_source.__revision__)
     logger.info(update_app_source.__revision__)
     source_file = './app_source/app_source.xml'
