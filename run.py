@@ -7,6 +7,7 @@ import json
 import update_app_source
 import logging
 import sys
+import LMToyBoxPython
 
 #logger = update_app_source.logger
 logger = logging.getLogger('update_app_source')
@@ -49,11 +50,18 @@ def conf_app_source_handler_logger():
     logger_conf.addHandler(create_hand_stdout())
     logger_conf.addHandler(create_hand_stderr())
 
+def conf_LMToyBoxPython_handler_logger():
+    logger_conf = logging.getLogger('LMToyBoxPython')
+    logger_conf.addHandler(create_hand_stdout())
+    logger_conf.addHandler(create_hand_stderr())
+
 
 if __name__ == '__main__':
     conf_root_logger()
     conf_update_app_source_logger()
     conf_app_source_handler_logger()
+    conf_LMToyBoxPython_handler_logger()
+    LMToyBoxPython.logging_test()
     logger.info(update_app_source.__revision__)
     source_file = './app_source/app_source.xml'
     # TODO: use 'update_app_source' project to create the source file
