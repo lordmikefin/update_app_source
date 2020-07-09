@@ -70,3 +70,6 @@ if __name__ == '__main__':
     update_app_source.source.parse(source_file)
     json_dump = json.dumps(update_app_source.source.APPS, sort_keys=True, indent=2)
     logger.info('APPS: ' + json_dump)
+    logger.info('Create sum check file')
+    sum_file = './app_source/app_source.xml.sha256'
+    update_app_source.source.create_sum_file(sum_file, source_file)
