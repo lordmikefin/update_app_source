@@ -22,10 +22,15 @@ Get this project:
  git checkout master
  git remote -v
  git remote set-url origin git@github.com:lordmikefin/app_source.git
- cd ..
  
- cd app_source_handler
+ cd ../app_source_handler
  git checkout master
  git remote -v
  git remote set-url origin git@github.com:lordmikefin/app_source_handler.git
+ 
+ cd ../LMToyBoxPython
+ git checkout master
+ git remote -v
+ git remote set-url origin git@github.com:lordmikefin/LMToyBoxPython.git
+
 
