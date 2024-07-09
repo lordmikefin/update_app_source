@@ -4,7 +4,10 @@ Update app_source list
 
 ( Guide is under construction :)
 
-This project is sort of part of LordMike's Automatic Setup Bot for Windows
+This project is part of LordMike's Automatic Setup Bot for * projects.
+
+This will update 'app_source.xml' file in 'app_source' project.
+
 
 Get this project:
 
